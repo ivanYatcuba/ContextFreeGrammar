@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="gui.controller.CFGFormController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <TableView fx:id="cfgIn" layoutY="127.0" prefHeight="270.0" prefWidth="600.0">
+          <columns>
+            <TableColumn fx:id="var" prefWidth="111.0" text="V" />
+            <TableColumn fx:id="go" prefWidth="107.0" text="-&gt;" />
+            <TableColumn fx:id="rule" prefWidth="381.0" text="Rule" />
+          </columns>
+      </TableView>
+        <TextField layoutX="36.0" layoutY="56.0" prefHeight="34.0" prefWidth="239.0" />
+        <Button onAction="#buildCFG" layoutX="327.0" layoutY="53.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="77.0" text="Check!" />
+        <Button layoutX="470.0" layoutY="53.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="77.0" text="Show tree" />
+    </children>
+</Pane>
