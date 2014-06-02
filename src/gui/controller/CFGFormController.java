@@ -66,6 +66,12 @@ public class CFGFormController implements Initializable {
 
         var.setCellValueFactory(new PropertyValueFactory<Production, String>("name"));
         var.setCellFactory(TextFieldTableCell.<Production>forTableColumn());
+        var.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Production, String>>() {
+            @Override
+            public void handle(TableColumn.CellEditEvent<Production, String> productionStringCellEditEvent) {
+                productionStringCellEditEvent.getRowValue().setName(productionStringCellEditEvent.getNewValue());
+            }
+        });
 
         go.setCellValueFactory(new PropertyValueFactory<Production, String>("go"));
         go.setEditable(false);
@@ -107,7 +113,7 @@ public class CFGFormController implements Initializable {
         }
         cfg.setProductions(productions);
         cfg.setStartSymbol("S");
-        Set<String> terminals = new HashSet<>();
+        TreeSet<String> terminals = new TreeSet<>();
         for(String prod : productions.keySet()){
             for(String t : productions.get(prod)){
                 for(String key : productions.keySet()){
@@ -120,6 +126,8 @@ public class CFGFormController implements Initializable {
             }
         }
         cfg.setTerminals(terminals);
+
+        cfg.toChomskyForm();
         System.out.print(cfg);
     }
 
