@@ -47,7 +47,7 @@ public class Main extends Application {
         }
         Scene scene = new Scene(root, 392, 283);
 
-       // scene.getStylesheets().add("/GUI/fxml/style.css");
+        scene.getStylesheets().add("gui/fxml/style.css");
         return (scene);
     }
 

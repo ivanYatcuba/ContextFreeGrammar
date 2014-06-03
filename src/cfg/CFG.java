@@ -174,6 +174,12 @@ public class CFG {
 
     private void toNoUnitProductions(){
         HashMap<String, Set<String>> newProductions = new HashMap<>(productions);
+        for(String key : productions.keySet()){
+            newProductions.put(key, new HashSet<String>());
+            for(String prod : productions.get(key)){
+                newProductions.get(key).add(prod);
+            }
+        }
         boolean changes = false;
         for(String var : productions.keySet()){
             for(String rule : productions.get(var)){
