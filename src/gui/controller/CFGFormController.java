@@ -3,6 +3,8 @@ package gui.controller;
 
 import cfg.CFG;
 import cfg.CYKParser;
+import cfg.tree.DerivationTreeBuilder;
+import cfg.tree.TreeLayoutViewer;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -18,8 +20,12 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import javax.swing.*;
+import java.awt.*;
 import java.net.URL;
 import java.util.*;
+
+
 
 public class CFGFormController implements Initializable {
 
@@ -71,6 +77,7 @@ public class CFGFormController implements Initializable {
     private ImageView stats;
 
     private final String lexicon = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private DerivationTreeBuilder treeDrawer;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -78,7 +85,7 @@ public class CFGFormController implements Initializable {
         word.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String s2) {
-                if(!data.get(0).getRule().isEmpty() && !word.getText().isEmpty()){
+                if(!data.get(0).getRule().isEmpty()){
                     buildCFG();
                 }
             }
@@ -155,15 +162,35 @@ public class CFGFormController implements Initializable {
         }
         cfg.setTerminals(terminals);
 
+
         cfg.toChomskyForm();
+        System.out.println(cfg);
         CYKParser parser = new CYKParser(cfg);
 
-        if(parser.parse(word.getText())){
+        treeDrawer = null;
+        String parseWord = word.getText();
+        if(parseWord.isEmpty()) parseWord = "$";
+        if(parser.parse(parseWord)){
             stats.setImage(new Image("gui/img/good.png"));
+            treeDrawer = new DerivationTreeBuilder(parser);
         }else {
             stats.setImage(new Image("gui/img/bad.png"));
         }
     }
+
+
+    public void drawTree(){
+        if(treeDrawer != null){
+           JFrame frame = new JFrame();
+            Container content = frame.getContentPane();
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            content.add(new TreeLayoutViewer(treeDrawer));
+            frame.pack();
+            frame.setSize(500, 500);
+            frame.setVisible(true);
+        }
+    }
+
 
 
     public void clearData(){
@@ -171,5 +198,6 @@ public class CFGFormController implements Initializable {
         Production start = new Production("S", "");
         data.add(start);
     }
+
 
 }

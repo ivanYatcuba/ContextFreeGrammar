@@ -26,7 +26,6 @@ public class CFG {
     }
 
     public void toChomskyForm(){
-        CFG normalised = new CFG();
         removeEmptyProduction();
         toNoUnitProductions();
         toUnusedRemoved();
@@ -51,7 +50,11 @@ public class CFG {
                     }
                     if(temp.contains(terminal) && production.length()>=2){
                         productionCreated = true;
-                        newRules.add(production.replaceAll(terminal, name));
+                        String str = production;
+                        while (str.contains(terminal)){
+                            str = str.replace(terminal, name);
+                        }
+                        newRules.add(str);
                     } else {
                         newRules.add(production);
                     }
@@ -139,28 +142,31 @@ public class CFG {
     }
 
     private void removeEmptyProduction(){
+        boolean change = false;
         HashMap<String, Set<String>> newProductions = new HashMap<>();
         for(String t : productions.keySet()){
             newProductions.put(t, new HashSet<>(productions.get(t)));
         }
         for(String var : productions.keySet()){
             for(String production : productions.get(var)){
-                if(production.contains("$") && production.length()<2){
-
+                if(production.contains("$") && production.length()<2 && !var.equals(startSymbol)){
+                    change = true;
                     for(String key : productions.keySet()){
                         for(String keyProduction : productions.get(key)){
                             if(keyProduction.contains(var)){
-                                String newProduction =  keyProduction;
                                 productionFix(newProductions, var, "");
                             }
                         }
                     }
                     newProductions.get(var).remove(production);
+                } if(production.contains("$") && production.length()>2){
+                    newProductions.get(var).remove(production);
+                    newProductions.get(var).add(production.replaceAll("\\$", ""));
                 }
             }
         }
 
-       /* List<String> keysToRemove = new ArrayList<>();
+       List<String> keysToRemove = new ArrayList<>();
         for(String key : newProductions.keySet()){
             if(newProductions.get(key).isEmpty()){
                 keysToRemove.add(key);
@@ -168,8 +174,23 @@ public class CFG {
         }
         for(String key : keysToRemove){
             newProductions.remove(key);
-        }*/
-        productions = newProductions;
+        }
+
+        HashMap<String, Set<String>> newNewProductions = new HashMap<>();
+        for(String t : newProductions.keySet()){
+            newNewProductions.put(t, new HashSet<>(newProductions.get(t)));
+        }
+        for(String key : newProductions.keySet()){
+            for(String production : newProductions.get(key)){
+                for(String toRemove : keysToRemove){
+                    if(production.contains(toRemove)){
+                        newNewProductions.get(key).remove(production);
+                    }
+                }
+            }
+        }
+        productions = newNewProductions;
+        if(change) removeEmptyProduction();
     }
 
     private void toNoUnitProductions(){
@@ -227,14 +248,22 @@ public class CFG {
                 while(temp.toString().contains(key)){
                     temp =  temp.replace(temp.indexOf(key),
                             temp.indexOf(key) + key.length(), r);
-                    newProductions.get(innerKey).add(temp.toString());
+                    if(temp.toString().isEmpty()){
+                        newProductions.get(innerKey).add("$");
+                    }else {
+                        newProductions.get(innerKey).add(temp.toString());
+                    }
                 }
 
                 temp = new StringBuilder(production);
                 while(temp.toString().contains(key)){
                     temp =  temp.replace(temp.lastIndexOf(key),
                             temp.lastIndexOf(key) + key.length(), r);
-                    newProductions.get(innerKey).add(temp.toString());
+                    if(temp.toString().isEmpty()){
+                        newProductions.get(innerKey).add("$");
+                    }else {
+                        newProductions.get(innerKey).add(temp.toString());
+                    }
                 }
             }
         }

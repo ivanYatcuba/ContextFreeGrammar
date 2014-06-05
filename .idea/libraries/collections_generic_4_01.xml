@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="collections-generic-4.01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jung/collections-generic-4.01.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jung/jung-algorithms-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jung/jung-api-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jung/jung-graph-impl-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jung/jung-visualization-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
