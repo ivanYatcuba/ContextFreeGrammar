@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children><TableView fx:id="cfgIn" layoutX="-5.0" layoutY="-3.0" prefHeight="407.0" prefWidth="607.0">
+  <columns>
+    <TableColumn fx:id="var" prefWidth="144.0" text="V" />
+    <TableColumn fx:id="go" prefWidth="118.0" text="-&gt;" /><TableColumn fx:id="rule" prefWidth="344.0" text="Rule" />
+  </columns>
+</TableView>
+</children></AnchorPane>

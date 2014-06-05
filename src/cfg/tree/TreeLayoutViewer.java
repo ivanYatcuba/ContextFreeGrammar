@@ -40,7 +40,7 @@ public class TreeLayoutViewer extends JApplet  {
             public String transform(String s) {
                 if(s.contains("|")){
                     int i = s.lastIndexOf("|");
-                    return s.substring(0, i);
+                    return s.substring(i+1, s.length());
                 }else {
                     return s;
                 }

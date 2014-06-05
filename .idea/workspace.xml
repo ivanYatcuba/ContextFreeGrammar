@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59dc375b-a30a-4941-8395-01aceadb6b62" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/controller/ChomskyTableController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cfg/tree/DerivationTreeBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/collections_generic_4_01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jgraphx.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/gui/controller/EditingCell.java" afterPath="" />
+    <list default="true" id="5f5c9cdc-bb4a-40c2-95c8-33c5ffc363b0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/controller/CYKTableController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/controller/Production.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/fxml/chomsky.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/fxml/cyk.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cfg/CFG.java" afterPath="$PROJECT_DIR$/src/cfg/CFG.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/controller/CFGFormController.java" afterPath="$PROJECT_DIR$/src/gui/controller/CFGFormController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cfg/CYKParser.java" afterPath="$PROJECT_DIR$/src/cfg/CYKParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ContextFreeGrammar.iml" afterPath="$PROJECT_DIR$/ContextFreeGrammar.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/controller/ChomskyTableController.java" afterPath="$PROJECT_DIR$/src/gui/controller/ChomskyTableController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cfg/tree/DerivationTreeBuilder.java" afterPath="$PROJECT_DIR$/src/cfg/tree/DerivationTreeBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java" afterPath="$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml" afterPath="$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -68,53 +68,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java" line="3" class="CFGFormController.java" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/cfg/CYKParser.java" line="41" class="cfg.CYKParser" package="cfg">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/cfg/CFG.java" line="191" class="cfg.CFG" package="cfg">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -127,11 +80,80 @@
       <file leaf-file-name="DerivationTreeBuilder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cfg/tree/DerivationTreeBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="19" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1080">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getGraph#0;class#DerivationTreeBuilder#0" expanded="true" />
-              </folding>
+            <state line="15" column="17" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1098">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1314">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CFGFormController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="13" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="4428">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChomskyTableController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/controller/ChomskyTableController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1008">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Production.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/controller/Production.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="13" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="684">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CYKTableController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/controller/CYKTableController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeLayoutViewer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="42" selection-start="2046" selection-end="2046" vertical-scroll-proportion="0.7250438" vertical-offset="0" max-vertical-offset="1152">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CYKParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cfg/CYKParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1548">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandomNameGenerator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cfg/RandomNameGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="13" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="720">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,94 +161,7 @@
       <file leaf-file-name="CFG.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="41" selection-start="2012" selection-end="2012" vertical-scroll-proportion="0.0" vertical-offset="890" max-vertical-offset="5004">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChomskyTableController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gui/controller/ChomskyTableController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="4" selection-start="472" selection-end="472" vertical-scroll-proportion="0.7359413" vertical-offset="23" max-vertical-offset="486">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chomsky.fxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/fxml/chomsky.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="64" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mxGraph.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/jgraphx-master/lib/jgraphx.jar!/com/mxgraph/view/mxGraph.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="136" selection-start="9769" selection-end="9769" vertical-scroll-proportion="-73.84" vertical-offset="1592" max-vertical-offset="14400">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeLayoutViewer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="60" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="1656">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1813#2146#0" expanded="true" />
-                <element signature="e#2135#2136#0" expanded="true" />
-                <element signature="e#2718#2877#0" expanded="true" />
-                <element signature="e#2866#2867#0" expanded="true" />
-                <element signature="e#2954#3115#0" expanded="true" />
-                <element signature="e#3104#3105#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FXMLLoader.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-7-oracle/jre/lib/jfxrt.jar!/javafx/fxml/FXMLLoader.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="20" selection-start="12854" selection-end="12854" vertical-scroll-proportion="0.0" vertical-offset="4338" max-vertical-offset="8982">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cfgForm.fxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="35" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Image.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/awt/Image.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="22" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5886">
-              <folding>
-                <element signature="e#0#14018#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#13573#13574#0" expanded="false" />
-                <element signature="e#13616#13617#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/fxml/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="31" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1620">
+            <state line="4" column="13" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="5094">
               <folding />
             </state>
           </provider>
@@ -245,25 +180,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/cfg/Main.java" />
-        <option value="$PROJECT_DIR$/src/gui/controller.java" />
-        <option value="$PROJECT_DIR$/src/gui/controller/EditingCell.java" />
-        <option value="$PROJECT_DIR$/src/cfg/RandomNameGenerator.java" />
-        <option value="$PROJECT_DIR$/src/gui/Main.java" />
-        <option value="$PROJECT_DIR$/src/gui/fxml/style.css" />
-        <option value="$PROJECT_DIR$/src/cfg/DerivationTreeDrawer.java" />
-        <option value="$PROJECT_DIR$/src/cfg/tree/GraphBuilder.java" />
-        <option value="$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml" />
-        <option value="$PROJECT_DIR$/src/cfg/tree/TreeLayout.java" />
-        <option value="$PROJECT_DIR$/src/cfg/tree/TreeLayoutDemo.java" />
-        <option value="$PROJECT_DIR$/src/cfg/tree/DerivationTreeDrawer.java" />
-        <option value="$PROJECT_DIR$/src/cfg/CYKParser.java" />
         <option value="$PROJECT_DIR$/src/cfg/tree/DerivationTreeBuilder.java" />
         <option value="$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java" />
-        <option value="$PROJECT_DIR$/src/gui/controller/CFGFormController.java" />
-        <option value="$PROJECT_DIR$/src/cfg/CFG.java" />
-        <option value="$PROJECT_DIR$/src/gui/fxml/chomsky.fxml" />
-        <option value="$PROJECT_DIR$/src/gui/controller/ChomskyTableController.java" />
       </list>
     </option>
   </component>
@@ -273,7 +191,7 @@
     <option name="width" value="1370" />
     <option name="height" value="736" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -301,6 +219,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -335,6 +254,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContextFreeGrammar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContextFreeGrammar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,7 +365,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -434,68 +374,24 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/jgraphx-master/lib/jgraphx.jar!/" />
+    <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="contextfreegrammar" />
     <property name="FullScreen" value="false" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cfg.tree" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/gui/fxml" />
-      <recent name="$PROJECT_DIR$/src/gui/img" />
-    </key>
-  </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="gui.Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ContextFreeGrammar" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TreeLayoutViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="cfg.tree.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="cfg.tree.TreeLayoutViewer" />
+      <option name="MAIN_CLASS_NAME" value="gui.Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -505,6 +401,12 @@
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
@@ -517,41 +419,15 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -559,31 +435,12 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
       <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="0" />
-      <option name="HEIGHT" value="0" />
-      <option name="POLICY_FILE" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -597,9 +454,9 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -614,21 +471,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -638,9 +480,9 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -648,25 +490,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -704,16 +527,105 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TreeLayoutViewer" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TreeLayoutViewer" />
       </list>
     </recent_temporary>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SliceManager">
@@ -721,57 +633,22 @@
       <AnalysisUIOptions />
     </option>
   </component>
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="59dc375b-a30a-4941-8395-01aceadb6b62" name="Default" comment="" />
-      <created>1401534301090</created>
-      <updated>1401534301090</updated>
-      <workItem from="1401534304207" duration="537000" />
-      <workItem from="1401534850838" duration="7235000" />
-      <workItem from="1401551300877" duration="16878000" />
-      <workItem from="1401623714448" duration="9109000" />
-      <workItem from="1401636708828" duration="10504000" />
-      <workItem from="1401743136891" duration="39000" />
-      <workItem from="1401733170140" duration="157000" />
-      <workItem from="1401744709286" duration="12004000" />
-      <workItem from="1401758360815" duration="64000" />
-      <workItem from="1401824470992" duration="875000" />
-      <workItem from="1401905415827" duration="20893000" />
+      <changelist id="5f5c9cdc-bb4a-40c2-95c8-33c5ffc363b0" name="Default" comment="" />
+      <created>1401985637234</created>
+      <updated>1401985637234</updated>
+      <workItem from="1401985637251" duration="2229000" />
+      <workItem from="1401988805263" duration="165000" />
     </task>
-    <task id="LOCAL-00001" summary="chomsky normal form completed">
-      <created>1401745712312</created>
-      <updated>1401745712312</updated>
-    </task>
-    <task id="LOCAL-00002" summary="finished CYK, some view features">
-      <created>1401758397133</created>
-      <updated>1401758397133</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78295000" />
+    <option name="totallyTimeSpent" value="2394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="36" width="1370" height="736" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -780,24 +657,24 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39644012" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2152568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2588997" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -813,468 +690,155 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="chomsky normal form completed" />
-    <MESSAGE value="finished CYK, some view features" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished CYK, some view features" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cfg/RandomNameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="68" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="2520">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3390#3402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="468">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1314">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="119" selection-start="7349" selection-end="7349" vertical-scroll-proportion="0.0" vertical-offset="3348" max-vertical-offset="4374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CYKParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="180">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getParseTable#0;class#CYKParser#0" expanded="true" />
-            <element signature="method#getWordTerminals#0;class#CYKParser#0" expanded="true" />
-            <element signature="method#getGrammar#0;class#CYKParser#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/RandomNameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="68" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="2520">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3390#3402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="468">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1314">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="119" selection-start="7349" selection-end="7349" vertical-scroll-proportion="0.0" vertical-offset="3348" max-vertical-offset="4374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CYKParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="180">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getParseTable#0;class#CYKParser#0" expanded="true" />
-            <element signature="method#getWordTerminals#0;class#CYKParser#0" expanded="true" />
-            <element signature="method#getGrammar#0;class#CYKParser#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/RandomNameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="68" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="2520">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3390#3402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="468">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1314">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="10" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="4248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/RandomNameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="68" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="2520">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3390#3402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="468">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1314">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="56" selection-start="7300" selection-end="7300" vertical-scroll-proportion="0.0" vertical-offset="3438" max-vertical-offset="3726">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="9" selection-start="3464" selection-end="3464" vertical-scroll-proportion="0.0" vertical-offset="1854" max-vertical-offset="2412">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3390#3402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="468">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1314">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="80" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="64" selection-start="3371" selection-end="3371" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2160">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3390#3402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="468">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="11" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1314">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="15" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="198">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-7-oracle/jre/lib/jfxrt.jar!/javafx/fxml/FXMLLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="20" selection-start="12854" selection-end="12854" vertical-scroll-proportion="0.0" vertical-offset="4214" max-vertical-offset="8964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="54" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1062">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/RandomNameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="76" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="31" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="1620">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/cfgForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="35" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/jgraphx-master/lib/jgraphx.jar!/com/mxgraph/view/mxGraph.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="136" selection-start="9769" selection-end="9769" vertical-scroll-proportion="-73.84" vertical-offset="1592" max-vertical-offset="14400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cfg/tree/DerivationTreeBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="19" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1080">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getGraph#0;class#DerivationTreeBuilder#0" expanded="true" />
-          </folding>
+        <state line="15" column="17" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1098">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/awt/Image.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="22" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5886">
-          <folding>
-            <element signature="e#0#14018#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#13573#13574#0" expanded="false" />
-            <element signature="e#13616#13617#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="60" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0" vertical-offset="913" max-vertical-offset="1656">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1813#2146#0" expanded="true" />
-            <element signature="e#2135#2136#0" expanded="true" />
-            <element signature="e#2718#2877#0" expanded="true" />
-            <element signature="e#2866#2867#0" expanded="true" />
-            <element signature="e#2954#3115#0" expanded="true" />
-            <element signature="e#3104#3105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CYKParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="76" selection-start="2000" selection-end="2000" vertical-scroll-proportion="0.0" vertical-offset="607" max-vertical-offset="1530">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getParseTable#0;class#CYKParser#0" expanded="true" />
-            <element signature="method#getWordTerminals#0;class#CYKParser#0" expanded="true" />
-            <element signature="method#getGrammar#0;class#CYKParser#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="41" selection-start="2012" selection-end="2012" vertical-scroll-proportion="0.0" vertical-offset="890" max-vertical-offset="5004">
+        <state line="13" column="13" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1314">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="3" selection-start="1740" selection-end="1965" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="3600">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3390#3402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/fxml/chomsky.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="64" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+        <state line="35" column="13" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="4428">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/controller/ChomskyTableController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="472" selection-end="472" vertical-scroll-proportion="0.7359413" vertical-offset="23" max-vertical-offset="486">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="15" column="13" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1008">
+          <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>grails-2.3.5</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>ContextFreeGrammar</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>jgraphx</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/Production.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/CYKTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="42" selection-start="2046" selection-end="2046" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/CYKParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1548">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/RandomNameGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="5094">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/RandomNameGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/CFGFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="13" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3582">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/Production.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/CYKTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="738">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/ChomskyTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/CFG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5094">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/tree/DerivationTreeBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="17" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/CYKParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/tree/TreeLayoutViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="42" selection-start="2046" selection-end="2046" vertical-scroll-proportion="0.7250438" vertical-offset="0" max-vertical-offset="1152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 

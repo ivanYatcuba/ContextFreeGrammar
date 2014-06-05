@@ -3,15 +3,16 @@ package cfg;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class CYKParser {
-    private HashMap<String, Set<HashMap<Integer, Integer>>>[][] parseTable;
+    private HashMap<String, Set<TreeMap<Integer, Integer>>>[][] parseTable;
     private CFG grammar;
     private char[]  wordTerminals;
 
     public CYKParser(CFG grammar){this.grammar = grammar;}
 
-    public HashMap<String, Set<HashMap<Integer, Integer>>>[][] getParseTable() {return parseTable;}
+    public HashMap<String, Set<TreeMap<Integer, Integer>>>[][] getParseTable() {return parseTable;}
 
     public char[] getWordTerminals() {return wordTerminals;}
 
@@ -19,7 +20,7 @@ public class CYKParser {
 
     public boolean parse(String word){
         this.wordTerminals = word.toCharArray();
-        parseTable = (HashMap<String, Set<HashMap<Integer, Integer>>>[][])new HashMap[word.length()][word.length()];
+        parseTable = (HashMap<String, Set<TreeMap<Integer, Integer>>>[][])new HashMap[word.length()][word.length()];
         for(int i = 0; i < parseTable[0].length; i++){
             for(String key : grammar.getProductions().keySet()){
                 for(String production : grammar.getProductions().get(key)){
@@ -27,7 +28,7 @@ public class CYKParser {
                         if(parseTable[0][i] == null){
                             parseTable[0][i] = new HashMap<>();
                         }
-                        parseTable[0][i].put(key, new HashSet<HashMap<Integer, Integer>>());
+                        parseTable[0][i].put(key, new HashSet<TreeMap<Integer, Integer>>());
                     }
                 }
             }
@@ -35,15 +36,15 @@ public class CYKParser {
         for(int n = 0; n < word.length(); n++){
             for(int i = 0; i < word.length()-n-1; i++){
                 for(int j = 0; j < n+1; j++){
-                    HashMap<String, Set<HashMap<Integer, Integer>>> possibleProductions = new HashMap<>();
+                    HashMap<String, Set<TreeMap<Integer, Integer>>> possibleProductions = new HashMap<>();
                     if(parseTable[j][i] != null && parseTable[n-j][j+i+1]!=null)
                         for(String production : parseTable[j][i].keySet()){
                             for(String production1 : parseTable[n-j][j+i+1].keySet()){
-                                possibleProductions.put(production+production1, new HashSet<HashMap<Integer, Integer>>());
-                                HashMap<Integer, Integer> ind = new HashMap<>();
+                                possibleProductions.put(production+production1, new HashSet<TreeMap<Integer, Integer>>());
+                                TreeMap<Integer, Integer> ind = new TreeMap<>();
                                 ind.put(j, i);
                                 possibleProductions.get(production+production1).add(ind);
-                                ind = new HashMap<>();
+                                ind = new TreeMap<>();
                                 ind.put(n - j, j + i + 1);
                                 possibleProductions.get(production+production1).add(ind);
                             }

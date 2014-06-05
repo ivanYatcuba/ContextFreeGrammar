@@ -14,9 +14,10 @@
             <TableColumn fx:id="rule" prefWidth="381.0" text="Rule" />
           </columns>
       </TableView>
-        <TextField fx:id="word" layoutX="53.0" layoutY="56.0" prefHeight="34.0" prefWidth="322.0" /><Button layoutX="423.0" layoutY="56.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="146.0" text="CYK Table" />
+        <TextField fx:id="word" layoutX="53.0" layoutY="56.0" prefHeight="34.0" prefWidth="322.0" />
+        <Button onAction="#showCYK" layoutX="423.0" layoutY="56.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="146.0" text="CYK Table" />
         <Button onAction="#drawTree" layoutX="423.0" layoutY="100.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="146.0" text="Parse Tree" />
-        <Button layoutX="423.0" layoutY="14.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="146.0" text="Chomsky Form" />
+        <Button onAction="#openChomsky" layoutX="423.0" layoutY="14.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="146.0" text="Chomsky Form" />
         <ImageView fx:id="stats" fitHeight="34.0" fitWidth="35.0" layoutX="14.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" />
         <Button onAction="#clearData" layoutX="53.0" layoutY="105.0" mnemonicParsing="false" text="Clear" />
     </children>

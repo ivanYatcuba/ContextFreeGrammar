@@ -5,13 +5,18 @@ import cfg.CFG;
 import cfg.CYKParser;
 import cfg.tree.DerivationTreeBuilder;
 import cfg.tree.TreeLayoutViewer;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.embed.swing.JFXPanel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -22,41 +27,13 @@ import javafx.scene.image.ImageView;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
 
 
 public class CFGFormController implements Initializable {
-
-    public class Production{
-        private String name;
-        private String rule;
-        private final String GO = "->";
-
-        private Production() {}
-        private Production(String name, String rule) {
-            this.name = name;
-            this.rule = rule;
-        }
-
-        public String getName() {return name;}
-        public void setName(String name) {this.name = name;}
-
-        public String getRule() {return rule;}
-        public void setRule(String rule) {this.rule = rule;}
-
-        public String getGo() {return GO;}
-
-        @Override
-        public String toString() {
-            return "Production{" +
-                    "name='" + name + '\'' +
-                    ", rule='" + rule + '\'' +
-                    ", GO='" + GO + '\'' +
-                    '}';
-        }
-    }
 
     private ObservableList<Production> data = FXCollections.observableArrayList();
 
@@ -128,9 +105,9 @@ public class CFGFormController implements Initializable {
 
         cfgIn.setItems(data);
     }
-
+    CFG cfg = new CFG();
     public void buildCFG(){
-        CFG cfg = new CFG();
+
         if(data.get(data.size()-1).getRule().isEmpty()){
             data.remove(data.size()-1);
         }
@@ -181,7 +158,7 @@ public class CFGFormController implements Initializable {
 
     public void drawTree(){
         if(treeDrawer != null){
-           JFrame frame = new JFrame();
+            JFrame frame = new JFrame();
             Container content = frame.getContentPane();
             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             content.add(new TreeLayoutViewer(treeDrawer));
@@ -189,6 +166,28 @@ public class CFGFormController implements Initializable {
             frame.setSize(500, 500);
             frame.setVisible(true);
         }
+    }
+
+    public void showCYK(){
+        JFrame frame = new JFrame("CFG");
+        frame.setLocationRelativeTo(null);
+        final JFXPanel fxPanel = new JFXPanel();
+        frame.add(fxPanel);
+        frame.setSize(600, 400);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        final CYKTableController controller = new CYKTableController();
+        CYKParser parser = new CYKParser(cfg);
+        String parseWord = word.getText();
+        if(parseWord.isEmpty()) parseWord = "$";
+        parser.parse(parseWord);
+        controller.setCykParser(parser);
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                createScene(fxPanel, "../fxml/cyk.fxml", controller);
+            }
+        });
     }
 
 
@@ -199,5 +198,43 @@ public class CFGFormController implements Initializable {
         data.add(start);
     }
 
+    public void openChomsky(){
+        // This method is invoked on the EDT thread
+        JFrame frame = new JFrame("CFG");
+        frame.setLocationRelativeTo(null);
+        final JFXPanel fxPanel = new JFXPanel();
+        frame.add(fxPanel);
+        frame.setSize(600, 400);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        final ChomskyTableController controller = new ChomskyTableController();
+        cfg.toChomskyForm();
+        controller.setCfg(cfg);
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                createScene(fxPanel, "../fxml/chomsky.fxml", controller);
+            }
+        });
+    }
+
+
+    private  void createScene(JFXPanel fxPanel, String path, Object controller) {
+
+        Parent root = null;
+        try {
+
+            FXMLLoader loader = new FXMLLoader(CFGFormController.class.getResource(path));
+            loader.setController(controller);
+            root = (Parent)loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root, 392, 283);
+
+        scene.getStylesheets().add("gui/fxml/style.css");
+        fxPanel.setScene(scene);
+    }
 
 }

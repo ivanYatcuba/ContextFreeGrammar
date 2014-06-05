@@ -93,7 +93,7 @@ public class CFG {
                     }
                     if(count > 2){
                         newRules.remove(production);
-                        newProd = production.replace(outProd.toString(), "");
+                        newProd = production.substring(outProd.length(), production.length());
                         String name = RandomNameGenerator.generate(productions.keySet(), terminals);
                         for(String k : productions.keySet()){
                             if(name.contains(k)){
@@ -149,8 +149,8 @@ public class CFG {
         }
         for(String var : productions.keySet()){
             for(String production : productions.get(var)){
-                if(production.contains("$") && production.length()<2 && !var.equals(startSymbol)){
-                    change = true;
+                if(production.contains("$") && production.length()<2){
+
                     for(String key : productions.keySet()){
                         for(String keyProduction : productions.get(key)){
                             if(keyProduction.contains(var)){
@@ -158,7 +158,10 @@ public class CFG {
                             }
                         }
                     }
-                    newProductions.get(var).remove(production);
+                    if(!var.equals(startSymbol)){
+                        change = true;
+                        newProductions.get(var).remove(production);
+                    }
                 } if(production.contains("$") && production.length()>2){
                     newProductions.get(var).remove(production);
                     newProductions.get(var).add(production.replaceAll("\\$", ""));
@@ -185,12 +188,13 @@ public class CFG {
                 for(String toRemove : keysToRemove){
                     if(production.contains(toRemove)){
                         newNewProductions.get(key).remove(production);
+                        if(production.replace(toRemove, "").isEmpty())newNewProductions.get(key).add("$");
                     }
                 }
             }
         }
         productions = newNewProductions;
-        if(change) removeEmptyProduction();
+        //if(change) removeEmptyProduction();
     }
 
     private void toNoUnitProductions(){
@@ -246,6 +250,7 @@ public class CFG {
             for(String production : productions.get(innerKey)){
                 StringBuilder temp = new StringBuilder(production);
                 while(temp.toString().contains(key)){
+
                     temp =  temp.replace(temp.indexOf(key),
                             temp.indexOf(key) + key.length(), r);
                     if(temp.toString().isEmpty()){
